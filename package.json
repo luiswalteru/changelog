@@ -1,11 +1,20 @@
 {
   "name": "changelog",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "scripts": {
+    "version": "auto-changelog -p && git add CHANGELOG.md"
+  },
+  "auto-changelog": {
+    "output": "HISTORY.md",
+    "template": "keepachangelog",
+    "unreleased": true,
+    "commitLimit": false
+  },
+  "devDependencies": {
+    "auto-changelog": "^2.5.0"
+  }
 }
